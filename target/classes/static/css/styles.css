@@ -1,0 +1,93 @@
+.input-container {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+}
+
+body, .main {
+    font-size: 1.2rem;
+}
+
+.input {
+    width: 90%;
+}
+
+.sign-in-container {
+    padding-top: 10%;
+}
+
+.welcome-container {
+    height: 100%;
+    background-image: urL('/image/lhp.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html, body, .row, .welcome-container, .sign-in-container{
+    height: 100%;
+}
+
+#registration {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.course-container {
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #EEEEEE;
+    height: fit-content;
+}
+
+.course-container:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.register-course-button {
+    background-color: #00a2ff;
+    color: white;
+    border: none;
+    padding: 8px 8px 8px 8px;
+    position: relative;
+    left: 50%;
+    top: 30%;
+}
+
+.register-course-button:hover {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #af0000;
+}
+
+.active {
+    border-bottom: 4px solid white;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color: #af0000;
+}
+
+.register-user-button {
+    margin-top: 20px;
+}
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/image/icon.png">
+</head>
+<body>
+    <div class="row">
+        <div class="col-9 welcome-container">
+            <h1 class="welcome-content"></h1>
+        </div>
+        <div class="col sign-in-container">
+            <h1>Sign in now</h1>
+            <div th:if="${param.error}" style="color: red">
+                Invalid username and password.
+            </div>
+            <div th:if="${param.logout}">
+                You have been logged out.
+            </div>
+            <form th:action="@{/auth/login}" th:object="${loginUser}" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control input" id="username" placeholder="Username" th:field="*{username}" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control input" id="password" placeholder="Password" th:field="*{password}" required autofocus>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <div><small><a href="/auth/forgot-password">Forgot password?</a></small></div>
+                </div>
+                <hr>
+                <div>Don't have account? <a th:href="@{/auth/register}">Register</a> now!</div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
